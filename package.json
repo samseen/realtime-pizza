@@ -1,0 +1,9 @@
+{
+  "name": "realtime-pizza",
+  "version": "1.0.0",
+  "description": "This is a realtime pizza app",
+  "main": "index.js",
+  "repository": "https://github.com/samseen/realtime-pizza",
+  "author": "Samson Akanbi",
+  "license": "MIT"
+}
