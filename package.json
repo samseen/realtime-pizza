@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/samseen/realtime-pizza",
   "author": "Samson Akanbi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  }
 }
