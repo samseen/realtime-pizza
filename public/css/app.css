@@ -4,3 +4,7 @@ body {
   color: #232323;
 }
 
+nav li:last-child a {
+  background: #FE5F1E;
+}
+
