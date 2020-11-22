@@ -8,4 +8,14 @@ body {
 
 nav li:last-child a {
     background: $primary;
+    &:hover {
+        background: $primary-hover;
+    }
+}
+
+nav li a {
+    &:hover {
+        color: $primary;
+    }
+    
 }
