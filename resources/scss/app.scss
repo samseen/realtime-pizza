@@ -14,7 +14,7 @@ nav li:last-child a {
 }
 
 nav li a {
-    transition: all .3s ease-in-out;
+    transition: $smooth;
     &:hover {
         color: $primary;
     }
