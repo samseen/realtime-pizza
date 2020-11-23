@@ -28,3 +28,13 @@ section.hero {
 .size {
     background: $secondary;
 }
+
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+    &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+    }
+}
