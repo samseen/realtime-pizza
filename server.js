@@ -7,8 +7,13 @@ const PORT = process.env.PORT || 3000
 
 //Assets
 app.use(express.static('public'))
+
 app.get('/', (req, res) => {
     res.render('home')
+})
+
+app.get('/cart', (req, res) => {
+    res.render('customers/cart')
 })
 
 // Set template engine
