@@ -32,6 +32,7 @@ section.hero {
 .add-to-cart {
   border: 2px solid #FE5F1E;
   color: #FE5F1E;
+  transition: all 0.3s ease-in-out;
 }
 
 .add-to-cart:hover {
