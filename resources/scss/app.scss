@@ -57,4 +57,10 @@ section.cart {
 section.login {
     background: $secondary;
     min-height: calc(100vh - 90px);
+    a {
+        color: $primary;
+        &:hover {
+            color: $primary-hover;
+        }
+    }
 }

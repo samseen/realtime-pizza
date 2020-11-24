@@ -62,3 +62,11 @@ section.login {
   min-height: calc(100vh - 90px);
 }
 
+section.login a {
+  color: #FE5F1E;
+}
+
+section.login a:hover {
+  color: #b23301;
+}
+
