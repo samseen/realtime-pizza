@@ -5,6 +5,7 @@ const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
+const session = require('express-session')
 
 //Database Connection
 const url = 'mongodb://localhost:27017/pizza'
@@ -15,6 +16,11 @@ connection.once('open', () => {
 }).catch(err => {
     console.log('Connection failed...')
 });
+
+//Session Configuration
+app.use(session({
+    secret
+}))
 
 //Assets
 app.use(express.static('public'))
