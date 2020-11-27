@@ -4,6 +4,9 @@ const ejs = require('ejs')
 const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
+const mongoose = require('mongoose')
+
+//Database Connection
 
 //Assets
 app.use(express.static('public'))
