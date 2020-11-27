@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
@@ -6,6 +7,7 @@ const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const session = require('express-session')
+const flash = require('express-flash')
 
 //Database Connection
 const url = 'mongodb://localhost:27017/pizza'
@@ -19,8 +21,13 @@ connection.once('open', () => {
 
 //Session Configuration
 app.use(session({
-    secret
+    secret: process.env.COOKIE_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 } //24 hours
 }))
+
+app.use(flash())
 
 //Assets
 app.use(express.static('public'))
