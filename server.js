@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose')
 const session = require('express-session')
 const flash = require('express-flash')
+const MongoDbStore = require('connect-mongo')(session)
 
 //Database Connection
 const url = 'mongodb://localhost:27017/pizza'
@@ -19,10 +20,17 @@ connection.once('open', () => {
     console.log('Connection failed...')
 });
 
+//Session Store
+let mongoStore = new MongoDbStore({
+                mongooseConnection: connection,
+                collection: 'sessions'
+            })
+
 //Session Configuration
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false,
+    store: mongoStore,
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 } //24 hours
 }))
