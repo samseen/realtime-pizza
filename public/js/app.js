@@ -3761,10 +3761,12 @@ var _require = __webpack_require__(/*! ../../app/models/menu */ "./app/models/me
     update = _require.update;
 
 var addToCart = document.querySelectorAll('.add-to-cart');
+var cartCounter = document.querySelector("#cartCounter");
 
 function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/update-cart', pizza).then(function (res) {
     console.log(res);
+    cartCounter.innerText = res.data.totalQty;
   });
 }
 
