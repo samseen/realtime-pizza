@@ -10,6 +10,7 @@ function updateCart(pizza) {
     axios.post('/update-cart', pizza).then(res => {
         cartCounter.innerText = res.data.totalQty
         new noty({
+            type: 'success',
             text: 'Item added to cart'
         }).show();
     })

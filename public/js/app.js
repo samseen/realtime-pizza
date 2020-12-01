@@ -6898,6 +6898,7 @@ function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/update-cart', pizza).then(function (res) {
     cartCounter.innerText = res.data.totalQty;
     new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
+      type: 'success',
       text: 'Item added to cart'
     }).show();
   });
