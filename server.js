@@ -42,6 +42,12 @@ app.use(express.static('public'))
 
 app.use(express.json())
 
+// Global Middleware
+app.use((req, res, next) => {
+    res.locals.session = req.session
+    next()
+})
+
 // Set template engine
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
