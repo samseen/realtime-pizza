@@ -11,6 +11,7 @@ function updateCart(pizza) {
         cartCounter.innerText = res.data.totalQty
         new noty({
             type: 'success',
+            timeout: 1000,
             text: 'Item added to cart'
         }).show();
     })
