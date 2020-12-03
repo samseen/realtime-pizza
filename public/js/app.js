@@ -6903,6 +6903,13 @@ function updateCart(pizza) {
       text: 'Item added to cart',
       progressBar: false
     }).show();
+  })["catch"](function (err) {
+    new Noty({
+      type: 'error',
+      timeout: 1000,
+      text: 'Something went wrong',
+      progressBar: false
+    });
   });
 }
 
