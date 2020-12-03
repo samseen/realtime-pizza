@@ -12,7 +12,8 @@ function updateCart(pizza) {
         new noty({
             type: 'success',
             timeout: 1000,
-            text: 'Item added to cart'
+            text: 'Item added to cart',
+            progressBar: false
         }).show();
     })
 }

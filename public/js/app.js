@@ -6899,7 +6899,9 @@ function updateCart(pizza) {
     cartCounter.innerText = res.data.totalQty;
     new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
       type: 'success',
-      text: 'Item added to cart'
+      timeout: 1000,
+      text: 'Item added to cart',
+      progressBar: false
     }).show();
   });
 }
