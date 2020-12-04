@@ -8,7 +8,7 @@ function authController() {
         },
         postRegister(req, res) {
             const { name, email, password } = req.body
-            
+            console.log(req.body)
         }
     }
 }
