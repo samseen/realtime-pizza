@@ -1,3 +1,4 @@
+const User = require('../../models/user')
 function authController() {
     return {
         login(req, res) {
@@ -8,6 +9,11 @@ function authController() {
         },
         postRegister(req, res) {
             const { name, email, password } = req.body
+            // Validate Request
+            if(!name || !email || !password) {
+                req.flash('error', 'All fields are required')
+                return res.redirect('/register')
+            }
             console.log(req.body)
         }
     }
