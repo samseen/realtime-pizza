@@ -16,6 +16,16 @@ function authController() {
                 req.flash('email', email)
                 return res.redirect('/register')
             }
+
+            // Check if email exists
+            User.exists({ email: email }, (err, result) => {
+                if(result) {
+                    req.flash('error', 'Email already taken')
+                    req.flash('name', name)
+                    req.flash('email', email)
+                }
+            })
+
             console.log(req.body)
         }
     }
