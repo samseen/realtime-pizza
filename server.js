@@ -52,6 +52,10 @@ app.use(express.json())
 // Global Middleware
 app.use((req, res, next) => {
     res.locals.session = req.session
+    res.locals.user = req.user
+    if(req.isAuthenticated()) {
+        res.locals.user = req.user;
+      }
     next()
 })
 
